@@ -1,0 +1,111 @@
+input.onGesture(Gesture.Shake, function () {
+    Step += 1
+    soundExpression.giggle.play()
+    led.stopAnimation()
+})
+let Step = 0
+basic.showIcon(IconNames.Heart)
+let StepGoal = 10
+basic.forever(function () {
+    if (Step == StepGoal) {
+        basic.showLeds(`
+            . # . . .
+            . # . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            `)
+        if (Step == StepGoal) {
+            basic.showLeds(`
+                . # # # .
+                # . . . .
+                # . # # .
+                # . . # .
+                . # # # .
+                `)
+            basic.showLeds(`
+                . # # # .
+                # . . . #
+                # . . . #
+                # . . . #
+                . # # # .
+                `)
+            basic.showLeds(`
+                . # # # .
+                . # . # .
+                . # # # .
+                . # . # .
+                . # . # .
+                `)
+            basic.showLeds(`
+                . # . . .
+                . # . . .
+                . # . . .
+                . # . . .
+                . # # # .
+                `)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+            basic.showLeds(`
+                # # # . .
+                # . . # .
+                # # # . .
+                # . # . .
+                # . . # .
+                `)
+            basic.showLeds(`
+                # # # . .
+                # . . . .
+                # # # . .
+                # . . . .
+                # # # . .
+                `)
+            basic.showLeds(`
+                . # # # .
+                . # . # .
+                . # # # .
+                . # . # .
+                . # . # .
+                `)
+            basic.showLeds(`
+                . # # # .
+                # . . . .
+                # . . . .
+                # . . . .
+                . # # # .
+                `)
+            basic.showLeds(`
+                . # . # .
+                . # . # .
+                . # # # .
+                . # . # .
+                . # . # .
+                `)
+            basic.showLeds(`
+                # # # . .
+                # . . . .
+                # # # . .
+                # . . . .
+                # # # . .
+                `)
+            basic.showLeds(`
+                # # # . .
+                # . . # .
+                # . . # .
+                # . . # .
+                # # # . .
+                `)
+        }
+    }
+    if (Step < StepGoal) {
+        basic.showNumber(Step)
+    }
+    if (Step > StepGoal) {
+        basic.showNumber(Step)
+    }
+})
